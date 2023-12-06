@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap');
+
+/* 
+Website Font:
+Raleway (400, 600, 700)
+
+Website Colors:
+#0f0f0f - Background Color
+#181818 - NavBar Color
+#fff - Font Color, Effects Color
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    background-color: #0f0f0f;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    background-color: #181818;
+}
+
+.navbar h2 {
+    padding: 10px;
+}
+
+.navbar ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+.navbar ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+@keyframes home {
+    from {
+        margin-top: 40%;
+    }
+    to {
+        margin-top: 20%;
+    }
+}
+
+.home {
+    margin-top: 20%;
+    margin-left: 10%;
+    animation-name: home;
+    animation-duration: 1s;
+}
+
+.home img {
+    height: 25%;
+    width: 25%;
+    margin-left: 60%;
+    margin-top: -15%;
+    border-radius: 25px;
+    animation-name: image;
+}
