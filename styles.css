@@ -17,10 +17,14 @@ Website Colors:
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
     color: #fff;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #0f0f0f;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar {
@@ -63,6 +67,11 @@ body {
     width: 100%;
 }
 
+.mode {
+    cursor: pointer;
+
+}
+
 @keyframes home {
     from {
         margin-top: 40%;
@@ -73,10 +82,24 @@ body {
 }
 
 .home {
+    height: 100 vh;
     margin-top: 20%;
     margin-left: 10%;
     animation-name: home;
     animation-duration: 1s;
+}
+
+.typing {
+    position: relative;
+}
+
+.typing::before {
+    content: "";
+    height: 20px;
+    width: 2px;
+    position: absolute;
+    background: #fff;
+    right: -2px;
 }
 
 .home img {
@@ -85,5 +108,4 @@ body {
     margin-left: 60%;
     margin-top: -15%;
     border-radius: 25px;
-    animation-name: image;
 }
