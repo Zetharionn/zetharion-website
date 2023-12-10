@@ -38,6 +38,7 @@ body {
 
 .navbar h2 {
     padding: 10px;
+    cursor: pointer;
 }
 
 .navbar ul li {
@@ -67,26 +68,35 @@ body {
     width: 100%;
 }
 
-.mode {
-    cursor: pointer;
-
-}
-
-@keyframes home {
-    from {
-        margin-top: 40%;
-    }
-    to {
-        margin-top: 20%;
-    }
-}
-
-.home {
+.container {
     height: 100 vh;
     margin-top: 20%;
     margin-left: 10%;
-    animation-name: home;
-    animation-duration: 1s;
+}
+
+@keyframes animation {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+.container.animation {
+    animation-name: animation;
+    animation-duration: 0.75s;
+    animation-fill-mode: both;
+}
+
+.home img {
+    height: 25%;
+    width: 25%;
+    margin-left: 60%;
+    margin-top: -15%;
+    border-radius: 25px;
 }
 
 .typing {
@@ -102,10 +112,50 @@ body {
     right: -2px;
 }
 
-.home img {
-    height: 25%;
-    width: 25%;
-    margin-left: 60%;
-    margin-top: -15%;
-    border-radius: 25px;
+.skills-items {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3%;
 }
+
+.skill-item {
+    background-color: #181818;
+    padding: 12%;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #fff;
+}
+
+.skill-item span {
+    display: inline-block;
+    background-color: #fff;
+    padding: 5px 5px;
+    margin-bottom: 5px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.skill-item p {
+    margin-top: 2px;
+}
+
+.footer .container {
+    margin-left: 0;
+    width: 100%;
+    background-color: #181818;
+}
+
+.footer .container p {
+    text-align: center;
+    padding: 10px;
+}
+
+/*
+What you want to see here?
+/*
