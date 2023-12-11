@@ -1,58 +1,66 @@
+/*
+Website style.css
+Font - Raleway (https://fonts.google.com/specimen/Raleway)
+Created by Zetharion
+*/ 
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap');
 
 /* 
 Website Font:
-Raleway (400, 600, 700)
-
+Raleway (400, 600, 700, 900)
 Website Colors:
 #0f0f0f - Background Color
 #181818 - NavBar Color
 #fff - Font Color, Effects Color
-
 */
 
 * {
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
     box-sizing: border-box;
     color: #fff;
-    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #0f0f0f;
-    display: flexbox;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #0f0f0f;
 }
 
 .navbar {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     border-radius: 15px;
     background-color: #181818;
 }
-
 .navbar h2 {
-    padding: 10px;
+    position: relative;
+    padding: 5px;
     cursor: pointer;
 }
-
 .navbar ul li {
-    display: inline-block;
     list-style: none;
+    display: inline-block;
     margin: 10px 20px;
 }
-
 .navbar ul li a {
     text-decoration: none;
     font-size: 18px;
     position: relative;
 }
-
 .navbar ul li a::after {
     content: '';
     width: 0;
@@ -63,7 +71,6 @@ body {
     bottom: -6px;
     transition: width 0.5s;
 }
-
 .navbar ul li a:hover::after {
     width: 100%;
 }
@@ -73,7 +80,6 @@ body {
     margin-top: 20%;
     margin-left: 10%;
 }
-
 @keyframes animation {
     from {
         opacity: 0;
@@ -84,7 +90,6 @@ body {
         transform: translateY(0);
     }
 }
-
 .container.animation {
     animation-name: animation;
     animation-duration: 0.75s;
@@ -102,7 +107,6 @@ body {
 .typing {
     position: relative;
 }
-
 .typing::before {
     content: "";
     height: 20px;
@@ -113,12 +117,11 @@ body {
 }
 
 .skills-items {
-    margin-top: 2%;
     display: grid;
+    margin-top: 2%;
     grid-template-columns: repeat(4, 1fr);
     gap: 3%;
 }
-
 .skill-item {
     background-color: #181818;
     padding: 12%;
@@ -126,12 +129,10 @@ body {
     border-radius: 15px;
     transition: all 0.3s ease;
 }
-
 .skill-item:hover {
     cursor: pointer;
     border-bottom: 2px solid #fff;
 }
-
 .skill-item span {
     display: inline-block;
     background-color: #fff;
@@ -140,7 +141,6 @@ body {
     color: #fff;
     border-radius: 5px;
 }
-
 .skill-item p {
     margin-top: 2px;
 }
@@ -150,12 +150,7 @@ body {
     width: 100%;
     background-color: #181818;
 }
-
 .footer .container p {
     text-align: center;
     padding: 10px;
 }
-
-/*
-What you want to see here?
-/*
